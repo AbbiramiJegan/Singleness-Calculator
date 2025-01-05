@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's the probability of you staying single this year?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>What's the probability of you staying single this year?</h1>
+
+        <div class="section" id="persona-section">
+            <h2>Choose Your Persona</h2>
+            <input type="radio" name="persona" value="Hopeless Romantic" id="romantic"> <label for="romantic">Hopeless
+                Romantic 💖</label><br>
+            <input type="radio" name="persona" value="Cynical Realist" id="realist"> <label for="realist">Cynical
+                Realist 🧐</label><br>
+            <input type="radio" name="persona" value="Social Butterfly" id="butterfly"> <label for="butterfly">Social
+                Butterfly 🦋</label><br>
+            <input type="radio" name="persona" value="Introverted Hermit" id="hermit"> <label for="hermit">Introverted
+                Hermit 🌙</label><br>
+        </div>
+
+        <div class="section" id="attachment-section">
+            <h2>Attachment Style</h2>
+            <p>1. How do you typically react when someone you're dating doesn't reply to your messages quickly?</p>
+            <input type="radio" name="attachment-response" value="80"> <label>I get anxious and overthink 💭</label><br>
+            <input type="radio" name="attachment-response" value="50"> <label>I get slightly worried but give them space
+                🧘</label><br>
+            <input type="radio" name="attachment-response" value="20"> <label>I stay calm and assume they're busy
+                📱</label><br>
+
+            <p>2. How comfortable are you with expressing your emotions in a relationship?</p>
+            <input type="radio" name="emotion-expression" value="20"> <label>Very comfortable 💖</label><br>
+            <input type="radio" name="emotion-expression" value="50"> <label>Somewhat comfortable 🙂</label><br>
+            <input type="radio" name="emotion-expression" value="80"> <label>Not comfortable at all 🧊</label><br>
+        </div>
+
+        <div class="section" id="big-five-section">
+            <h2>Personality Traits</h2>
+            <p>3. How sociable are you in group settings?</p>
+            <input type="radio" name="sociability" value="20"> <label>Very sociable 🕺</label><br>
+            <input type="radio" name="sociability" value="50"> <label>Moderately sociable 😌</label><br>
+            <input type="radio" name="sociability" value="80"> <label>Prefer to stay quiet 🤫</label><br>
+
+            <p>4. How often do you experience mood swings?</p>
+            <input type="radio" name="mood-swings" value="80"> <label>Frequently 😡</label><br>
+            <input type="radio" name="mood-swings" value="50"> <label>Occasionally 🤔</label><br>
+            <input type="radio" name="mood-swings" value="20"> <label>Rarely 😌</label><br>
+        </div>
+
+        <div class="section" id="behavior-section">
+            <h2>Behavioral Data</h2>
+            <p>5. How many first dates did you go on last year?</p>
+            <input type="radio" name="first-dates" value="20"> <label>None 😢</label><br>
+            <input type="radio" name="first-dates" value="50"> <label>1-3 😊</label><br>
+            <input type="radio" name="first-dates" value="80"> <label>4 or more 😎</label><br>
+
+            <p>6. How often do you initiate conversations with someone you like?</p>
+            <input type="radio" name="conversation-initiation" value="20"> <label>Rarely 😳</label><br>
+            <input type="radio" name="conversation-initiation" value="50"> <label>Occasionally 🤝</label><br>
+            <input type="radio" name="conversation-initiation" value="80"> <label>Frequently 💬</label><br>
+        </div>
+
+        <div class="section" id="effort-section">
+            <h2>Effort to Find a Partner</h2>
+            <p>7. How actively do you pursue romantic connections?</p>
+            <input type="radio" name="pursuit-effort" value="20"> <label>Not actively 😴</label><br>
+            <input type="radio" name="pursuit-effort" value="50"> <label>Somewhat actively 🤔</label><br>
+            <input type="radio" name="pursuit-effort" value="80"> <label>Very actively 🚀</label><br>
+        </div>
+
+        <button onclick="calculateProbability()">Calculate Probability</button>
+
+        <div class="formula" id="formula">
+            <strong>Formula:</strong> P(Single) = 100 - (0.4 × Effort + 0.3 × Attachment + 0.3 × Emotional Readiness)
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <h2>Your Probability</h2>
+            <p id="probabilityMessage"></p>
+            <p><strong>Mathematical Explanation:</strong></p>
+            <p style="color: #ff4081;">This probability is derived from a formula that I made which factors in your
+                behavior, emotional readiness, and effort to pursue a romantic connection:</p>
+            <div class="explanation">
+                <p>Effort (0.4 weight): How actively you pursue romantic connections.</p>
+                <p>Attachment Style (0.3 weight): How you react in relationships and express your emotions.</p>
+                <p>Emotional Readiness (0.3 weight): Your comfort level with expressing emotions and handling personal
+                    challenges.</p>
+            </div>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center; color: #ff4081; font-size: 18px;">©️ Abbirami Jegan Jan, 2025</p>
+    </footer>
+
+</body>
+
+</html>
